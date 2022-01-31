@@ -5,7 +5,13 @@ using Unity.Netcode;
 
 public class NetworkButtonController : MonoBehaviour
 {
+#if UNITY_SERVER && !UNITY_EDITOR
+    public void Start()
+    {
+        NetworkManager.Singleton.StartServer();
+    }
 
+#else
     public void StartHost()
     {
         NetworkManager.Singleton.StartHost();
@@ -25,4 +31,5 @@ public class NetworkButtonController : MonoBehaviour
     {
         NetworkManager.Singleton.Shutdown();
     }
+#endif
 }
