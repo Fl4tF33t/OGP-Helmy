@@ -6,11 +6,12 @@ using Unity.Netcode;
 public class PlayerMove : NetworkBehaviour
 {
     [SerializeField] float movementSpeed = 5f;
+    CharacterController characterController;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -41,7 +42,9 @@ public class PlayerMove : NetworkBehaviour
             }
 
             transform.LookAt(transform.position + movementDirection);
-            transform.localPosition += movementDirection * Time.deltaTime * movementSpeed; 
+            //transform.localPosition += movementDirection * Time.deltaTime * movementSpeed;
+
+            characterController.Move(movementDirection * movementSpeed * Time.deltaTime);
         }
     }
 }
