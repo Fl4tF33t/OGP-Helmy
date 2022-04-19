@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using DilmersGames.Core.Singletons;
 
-public class PlayersManager : NetworkBehaviour
+public class PlayersManager : Singleton<PlayersManager>
 {
     public NetworkVariable<int> playersInGame = new NetworkVariable<int>();
 

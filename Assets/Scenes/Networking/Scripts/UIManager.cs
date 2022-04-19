@@ -8,9 +8,6 @@ using Unity.Netcode;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    PlayersManager pManager;
-
-    [SerializeField]
     Button startServerButton;
 
     [SerializeField]
@@ -68,6 +65,6 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        playersInGameText.text = $"Players in Game: {pManager.PlayersInGame}";
+        //playersInGameText.text = "Player numbers: " + PlayersManager.Instance.playersInGame;
     }
 }
