@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2089835645365573697}
   - component: {fileID: 8007756804598172724}
   - component: {fileID: -619137780635488885}
-  - component: {fileID: 3883053166621480901}
-  - component: {fileID: 8714850162004055818}
+  - component: {fileID: 2251806264197681070}
+  - component: {fileID: 7342316188722134672}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -132,7 +132,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3883053166621480901
+--- !u!114 &2251806264197681070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &8714850162004055818
+--- !u!114 &7342316188722134672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
